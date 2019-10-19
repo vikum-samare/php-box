@@ -20,17 +20,16 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Coming Soon Page</title>
+    <title>Vikum's home</title>
 
-    <meta name="generator" content="comingsoonpage.com 1.0.0" />
-    <meta name="description" content="">
+    <meta name="description" content="Home page of vikum.xyz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="My Coming Soon Page" />
-    <meta property="og:description" content="" />
+    <meta property="og:title" content="Vikum's Home page" />
+    <meta property="og:description" content="Vikum Samaranayake is a javascript developer" />
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">

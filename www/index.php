@@ -43,9 +43,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- === -->
-    <meta property="og:url" content="" />
+    <meta property="og:url" content="http://vikum.xyz" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vikum's Home page" />
+    <meta property="og:image" content="http://vikum.xyz/assets/profile-pic.png" />
     <meta property="og:description" content="Vikum Samaranayake is a javascript developer" />
 
     <!-- Font Awesome CSS -->
@@ -296,6 +297,9 @@
         #cspio-credit {
             font-size:11px;
         }
+        .cspio-profile-pic {
+            width: 20%;
+        }
 
     </style>
 
@@ -316,15 +320,15 @@
 
         <div id="cspio-description"><strong>Hi! </strong>Looking for me?</div>
 
-
+        <img src="assets/profile-pic.png" class="cspio-profile-pic" />
+        <div id="cspio-description">Vikum Samaranayake</div>
+        <div id="cspio-description"><a href="tel:+94770836756"><i class="fa fa-phone fa-1x"></i> +94 770 836 756</a></div>
         <div id="cspio-socialprofiles">
             <a href="https://twitter.com/SamVP007" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
             <a href="https://github.com/vikum-samare" target="_blank"><i class="fa fa-github fa-2x"></i></a>
             <a href="https://www.linkedin.com/in/vikum-samaranayake-4ab99392/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
             <a href="mailto:vikum@vikum.xyz" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
         </div>
-        <div id="cspio-description">Vikum Samaranayake</div>
-        <div id="cspio-description"><a href="tel:+94770836756"><i class="fa fa-phone fa-1x"></i> +94 770 836 756</a></div>
 
 
     </div><!-- end of #cspio-content -->

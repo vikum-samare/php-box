@@ -24,8 +24,25 @@
 
     <meta name="description" content="Home page of vikum.xyz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- === -->
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Vikum's Home page" />
@@ -60,7 +77,7 @@
 
         html{
             height:100%;
-            background: #ffffff url(https://images7.alphacoders.com/549/549959.jpg); no-repeat center bottom fixed;
+            background: #ffffff url("/assets/ballon-background.jpg"); no-repeat center bottom fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -297,7 +314,7 @@
 
         <h1 id="cspio-headline">vikum.xyz</h1>
 
-        <div id="cspio-description">Stay patient !!! Something cool is cooking :D</div>
+        <div id="cspio-description"><strong>Hi! </strong>Looking for me?</div>
 
 
         <div id="cspio-socialprofiles">
@@ -306,9 +323,9 @@
             <a href="https://www.linkedin.com/in/vikum-samaranayake-4ab99392/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
             <a href="mailto:vikum@vikum.xyz" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
         </div>
+        <div id="cspio-description">Vikum Samaranayake</div>
+        <div id="cspio-description"><a href="tel:+94770836756"><i class="fa fa-phone fa-1x"></i> +94 770 836 756</a></div>
 
-        <div id="cspio-credit">
-					</div>
 
     </div><!-- end of #cspio-content -->
 </div>

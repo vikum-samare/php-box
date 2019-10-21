@@ -20,9 +20,9 @@
     -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Vikum's home</title>
+    <title>SYNCLAB home</title>
 
-    <meta name="description" content="Home page of vikum.xyz">
+    <meta name="description" content="Home page of synclabsolutions.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
@@ -46,8 +46,8 @@
     <meta property="og:url" content="http://www.synclabsolutions.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Synclab Home Page" />
-    <meta property="og:image" content="http://vikum.xyz/assets/sync-lab-logo.jpg" />
-    <meta property="og:description" content="Vikum Samaranayake is a javascript developer" />
+    <meta property="og:image" content="http://www.synclabsolutions.com/assets/sync-lab-logo.jpg" />
+    <meta property="og:description" content="SYNCLAB software company" />
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">

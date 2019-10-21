@@ -1,25 +1,60 @@
 # ./docker-compose.yml
 
-version: '3'
 
-services:
-  db:
-    image: mysql:5.7
-    environment:
-      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
-      MYSQL_DATABASE: test_db
-      MYSQL_USER: devuser
-      MYSQL_PASSWORD: devpass
-    ports:
-      - "3306:3306"
-  web:
-    image: php:7.2.2-apache
-    container_name: php_web
-    depends_on:
-      - db
-    volumes:
-      - ./www/:/var/www/html/
-    ports:
-      - "80:80"
-    stdin_open: true
-    tty: true
+
+#services:
+#  db:
+#    image: mysql:5.7
+#    environment:
+#      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
+#      MYSQL_DATABASE: test_db
+#      MYSQL_USER: devuser
+#      MYSQL_PASSWORD: devpass
+#    ports:
+#      - "3306:3306"
+#  web:
+#    image: php:7.2.2-apache
+#    container_name: php_web
+#    depends_on:
+#      - db
+#    volumes:
+#      - ./www/:/var/www/html/
+#    ports:
+#      - "80:80"
+#    stdin_open: true
+#    tty: true
+#
+#    version: "3"
+#
+#    # ==============
+#
+#    services:
+#      db_node_domain:
+#        image: mysql:5.7
+#        volumes:
+#          - db_data:/var/lib/mysql
+#        restart: always
+#        environment:
+#          MYSQL_ROOT_PASSWORD: PASSWORD
+#          MYSQL_DATABASE: wordpress
+#          MYSQL_USER: wordpress
+#          MYSQL_PASSWORD: PASSWORD
+#        container_name: wordpress_db
+version: '3'
+  services:
+      web:
+        image: php:7.2.2-apache
+        container_name: php_web_1
+        volumes:
+          - ./www/:/var/www/html/
+        expose:
+          - 80
+        restart: always
+        environment:
+          VIRTUAL_HOST: www.vikum.xyz
+
+
+    networks:
+      default:
+        external:
+          name: nginx-proxy

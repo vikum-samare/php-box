@@ -3,7 +3,7 @@ version: "3"
 
 services:
 
-  site_1:
+  site_2:
     image: php:7.2.2-apache
     volumes:
               - ./www/:/var/www/html/
@@ -11,9 +11,9 @@ services:
       - 80
     restart: always
     environment:
-      VIRTUAL_HOST: www.vikum.xyz
+      VIRTUAL_HOST: www.synclabsolutions.com
 
-    container_name: vikum_site
+    container_name: synclab_site
 
 networks:
   default:

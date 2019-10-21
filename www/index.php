@@ -43,10 +43,10 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- === -->
-    <meta property="og:url" content="http://vikum.xyz" />
+    <meta property="og:url" content="http://www.synclabsolutions.com" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vikum's Home page" />
-    <meta property="og:image" content="http://vikum.xyz/assets/profile-pic.png" />
+    <meta property="og:title" content="Synclab Home Page" />
+    <meta property="og:image" content="http://vikum.xyz/assets/sync-lab-logo.jpg" />
     <meta property="og:description" content="Vikum Samaranayake is a javascript developer" />
 
     <!-- Font Awesome CSS -->
@@ -316,18 +316,16 @@
     <div id="cspio-content">
 
 
-        <h1 id="cspio-headline">vikum.xyz</h1>
+        <h1 id="cspio-headline">Welcome!</h1>
 
-        <div id="cspio-description"><strong>Hi! </strong>Looking for me?</div>
+        <div id="cspio-description">Awesome website from SYNCLAB is coming up ...</div>
 
-        <img src="assets/profile-pic.png" class="cspio-profile-pic" />
-        <div id="cspio-description">Vikum Samaranayake</div>
-        <div id="cspio-description"><a href="tel:+94770836756"><i class="fa fa-phone fa-1x"></i> +94 770 836 756</a></div>
+        <img src="assets/synclab-profile.png" class="cspio-profile-pic" />
+        <div id="cspio-description">SyncLab</div>
         <div id="cspio-socialprofiles">
-            <a href="https://twitter.com/SamVP007" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-            <a href="https://github.com/vikum-samare" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/vikum-samaranayake-4ab99392/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-            <a href="mailto:vikum@vikum.xyz" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+            <a href="https://www.facebook.com/synclabsolutions/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+            <a href="https://www.linkedin.com/company/sync-lab-solutions" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a href="mailto:hello@synclabsolutions.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
         </div>
 
 

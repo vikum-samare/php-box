@@ -1,60 +1,62 @@
-# ./docker-compose.yml
-
-
-
-#services:
-#  db:
-#    image: mysql:5.7
-#    environment:
-#      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
-#      MYSQL_DATABASE: test_db
-#      MYSQL_USER: devuser
-#      MYSQL_PASSWORD: devpass
-#    ports:
-#      - "3306:3306"
-#  web:
-#    image: php:7.2.2-apache
-#    container_name: php_web
-#    depends_on:
-#      - db
-#    volumes:
-#      - ./www/:/var/www/html/
-#    ports:
-#      - "80:80"
-#    stdin_open: true
-#    tty: true
 #
-#    version: "3"
+#version: "3"
 #
-#    # ==============
+#  services:
+#      web:
+#        image: php:7.2.2-apache
 #
-#    services:
-#      db_node_domain:
-#        image: mysql:5.7
 #        volumes:
-#          - db_data:/var/lib/mysql
+#          - ./www/:/var/www/html/
+#        expose:
+#          - 80
 #        restart: always
 #        environment:
-#          MYSQL_ROOT_PASSWORD: PASSWORD
-#          MYSQL_DATABASE: wordpress
-#          MYSQL_USER: wordpress
-#          MYSQL_PASSWORD: PASSWORD
-#        container_name: wordpress_db
-version: '3'
-  services:
-      web:
-        image: php:7.2.2-apache
-        container_name: php_web_1
-        volumes:
-          - ./www/:/var/www/html/
-        expose:
-          - 80
-        restart: always
-        environment:
-          VIRTUAL_HOST: www.vikum.xyz
+#          VIRTUAL_HOST: www.vikum.xyz
+#
+#        container_name: php_web_1
+#
+#
+#    networks:
+#      default:
+#        external:
+#          name: nginx-proxy
+#
+##===================================
 
+version: "3"
 
-    networks:
-      default:
-        external:
-          name: nginx-proxy
+services:
+  db_node_domain:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: PASSWORD
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: PASSWORD
+    container_name: wordpress_db
+
+  wordpress:
+    depends_on:
+      - db_node_domain
+    image: php:7.2.2-apache
+    volumes:
+              - ./www/:/var/www/html/
+    expose:
+      - 80
+    restart: always
+    environment:
+      VIRTUAL_HOST: www.vikum.xyz
+      WORDPRESS_DB_HOST: db_node_domain:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: PASSWORD
+    container_name: wordpress
+volumes:
+  db_data:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

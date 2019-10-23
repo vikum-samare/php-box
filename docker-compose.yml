@@ -1,19 +1,33 @@
 
 version: "3"
-
 services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
 
   site_1:
     image: php:7.2.2-apache
     volumes:
-              - ./www/:/var/www/html/
-    expose:
-      - 80
+      - ./www/site1/:/var/www/html/
     restart: always
     environment:
       VIRTUAL_HOST: www.vikum.xyz
 
     container_name: vikum_site
+
+  site_2:
+    image: php:7.2.2-apache
+    volumes:
+      - ./www/site2/:/var/www/html/
+    restart: always
+    environment:
+      VIRTUAL_HOST: www.synclabsolutions.com
+
+    container_name: synclab_site
 
 networks:
   default:

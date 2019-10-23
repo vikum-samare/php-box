@@ -78,7 +78,7 @@
 
         html{
             height:100%;
-            background: #ffffff url("/assets/ballon-background.jpg"); no-repeat center bottom fixed;
+            background: #ffffff url("assets/ballon-background.jpg"); no-repeat center bottom fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;

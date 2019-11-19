@@ -15,7 +15,7 @@ services:
       - ./www/site1/:/var/www/html/
     restart: always
     environment:
-      VIRTUAL_HOST: www.vikum.xyz
+      VIRTUAL_HOST: vikum.xyz www.vikum.xyz
 
     container_name: vikum_site
 

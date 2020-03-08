@@ -1,35 +1,39 @@
+# ./docker-compose.yml
 
-version: "3"
+version: '3.5'
+
 services:
-  nginx-proxy:
-    image: jwilder/nginx-proxy
-    container_name: nginx-proxy
+  mysql_1:
+    image: mysql:5.7
+    container_name: mysql_1
+    volumes:
+      - db_data:/var/lib/mysql
+    expose:
+      - "3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: my_secret_pw_shh
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devpass
+    ports:
+      - "3306:3306"
+
+  web:
+    image: thilinaperera/nginx-php-server
+    container_name: php_nginx_web_1
+    depends_on:
+      - mysql_1
+    volumes:
+      - ./www:/var/www/html
+      - ./config:/etc/nginx/custom-sites
     ports:
       - "80:80"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
+    links:
+      - mysql_1
 
-  site_1:
-    image: php:7.2.2-apache
-    volumes:
-      - ./www/site1/:/var/www/html/
-    restart: always
-    environment:
-      VIRTUAL_HOST: www.vikum.xyz
+    # stdin_open: true
+    # tty: true
 
-    container_name: vikum_site
+volumes:
+  db_data:
 
-  site_2:
-    image: php:7.2.2-apache
-    volumes:
-      - ./www/site2/:/var/www/html/
-    restart: always
-    environment:
-      VIRTUAL_HOST: www.synclabsolutions.com
-
-    container_name: synclab_site
-
-networks:
-  default:
-    external:
-      name: nginx-proxy
